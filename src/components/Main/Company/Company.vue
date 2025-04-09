@@ -35,4 +35,16 @@ section.section_company {
         border:  1px solid #C4C4C4;
     }
 }
+
+@media(max-width:768px) {
+    section.section_company {
+        @include main_block(50px, #EBEBEB);
+
+        div.section_company_partner {
+            width: 150px;
+            height: 80px;
+            padding: 0 15px;
+        }
+    }
+}
 </style>

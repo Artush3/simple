@@ -16,11 +16,14 @@
             </nav>
         </div>
     </header>
+    <Header2></Header2>
 </template>
 
 <script>
+import Header2 from './more/Header2.vue';
 export default {
-    name: "Header"
+    name: "Header",
+    components: { Header2 }
 }
 </script>
 
@@ -55,6 +58,12 @@ header.header_content {
                 }
             }
         }
+    }
+}
+
+@media(max-width:768px) {
+    header.header_content {
+        display: none;
     }
 }
 </style>

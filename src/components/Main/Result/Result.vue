@@ -89,4 +89,40 @@ section.section_result {
         }
     }
 }
+
+@media(max-width:768px) {
+    section.section_result {
+        @include main_block(60px, #EBEBEB);
+
+        div.section_result_examples {
+            margin-bottom: 40px;
+
+            div.section_result_examples_analogy {
+                max-width: 210px;
+                display: block;
+
+                div.section_result_examples_analogy_desc {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        div.section_result_white {
+            @include flex(start, space-between);
+
+            img {
+                width: 330px;
+                height: 256px;
+            }
+
+            div.section_result_white_desc {
+                max-width: 330px;
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
 </style>

@@ -6,7 +6,8 @@
                 <p>Бума́га (предположительно от итал. bombagia, первоисточником же считается иранский) — волокнистый материал с минеральными добавками. </p>
                 <a href="#"><button>Каталог</button></a>
             </div>
-            <img src="../../../img/Main/Performance/Layer 2 copy.svg" alt="показ">
+            <img id="first_img" src="../../../img/Main/Performance/Layer 2 copy.svg" alt="показ">
+            <img id="second_img" src="../../../img/Main/Performance/Layer 2.svg" alt="показ">
         </div>
     </section>
 </template>
@@ -45,6 +46,30 @@ section.section_performance {
     img {
         position: relative;
         top: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    section.section_performance {
+        div.section_performance_desc {
+            max-width: 390px;
+            
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        img#first_img {
+            display: none;
+        }
+    }
+}
+
+@media(min-width:769px) {
+    section.section_performance {
+        img#second_img {
+            display: none;
+        }
     }
 }
 </style>

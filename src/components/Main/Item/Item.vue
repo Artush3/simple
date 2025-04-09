@@ -2,7 +2,8 @@
     <section class="section_item">
         <div class="conteiner_content">
             <div class="section_item_product">
-                <img src="../../../img/Main/Item/Frame 208.svg" alt="продукт №1">
+                <img id="first_img" src="../../../img/Main/Item/Frame 208.svg" alt="продукт №1">
+                <img id="second_img" src="../../../img/Main/Item/Frame 2081.svg" alt="продукт №1">
                 <h2>Упаковка</h2>
                 <h3>Тираж: от 50 штук</h3>
                 <p>Сделано из крафт-бумаги или плотного картона. Упаковки имеют различные формы и расцветки, изготовим форму под заказ.</p>
@@ -12,7 +13,8 @@
                 </a>
             </div>
             <div class="section_item_product">
-                <img src="../../../img/Main/Item/Frame 209.svg" alt="продукт №2">
+                <img id="first_img" src="../../../img/Main/Item/Frame 209.svg" alt="продукт №2">
+                <img id="second_img" src="../../../img/Main/Item/Frame 2091.svg" alt="продукт №2">
                 <h2>Пакеты</h2>
                 <h3>Тираж: от 200 штук</h3>
                 <p>С прямоугольным дном. От 10 см до 60 см по высоте. Материалы: картон, крафт-бумага. Различные расцветки и дизайн.</p>
@@ -22,7 +24,8 @@
                 </a>
             </div>
             <div class="section_item_product">
-                <img src="../../../img/Main/Item/Frame 211.svg" alt="продукт №3">
+                <img id="first_img" src="../../../img/Main/Item/Frame 211.svg" alt="продукт №3">
+                <img id="second_img" src="../../../img/Main/Item/Frame 2111.svg" alt="продукт №3">
                 <h2>Кейсы</h2>
                 <h3>Тираж: от 30 штук</h3>
                 <p>Подойдет для документов и других бумаг. Различные расцветки, размеры и плотность. Материал: прессованная бумага.</p>
@@ -32,7 +35,8 @@
                 </a>
             </div>
             <div class="section_item_product">
-                <img src="../../../img/Main/Item/Frame 210.svg" alt="продукт №4">
+                <img id="first_img" src="../../../img/Main/Item/Frame 210.svg" alt="продукт №4">
+                <img id="second_img" src="../../../img/Main/Item/Frame 2101.svg" alt="продукт №4">
                 <h2>Другие изделия </h2>
                 <h3>Тираж: от 100 штук</h3>
                 <p>Нестандартные упаковки, кейсы и другие изделия различных размеров и конфигураций. Изготовим в кратчайшие сроки.</p>
@@ -62,10 +66,8 @@ section.section_item {
         div.section_item_product {
             max-width: 255px;
 
-            img {
-                &:first-child {
-                    width: 100%;
-                }
+            > img {
+                width: 100%;
             }
 
             h2 {
@@ -93,6 +95,37 @@ section.section_item {
                         margin-right: 5px;
                     };
                 }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    section.section_item {
+        @include main_block(50px);
+
+        div.conteiner_content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+            grid-row-gap: 50px;
+
+            div.section_item_product {
+                max-width: 100%;
+
+                img#first_img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:769px) {
+    section.section_item {
+        div.section_item_product {
+            img#second_img {
+                display: none;
             }
         }
     }
