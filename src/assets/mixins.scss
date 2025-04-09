@@ -1,0 +1,28 @@
+@mixin main_block($padding:0px, $background-color:#FFFFFF) {
+    padding: $padding 0;
+    background: $background-color;
+    width: 100%;
+    @content
+};
+
+@mixin flex($align-items:stretch, $justify-content:flex-start) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+};
+
+@mixin text($font-size, $color:#85859B, $line-height:100%, $font-weight:400) {
+    font-size: $font-size;
+    color: $color;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    @content
+};
+
+@mixin button {
+    @include text(20px, #7875FE);
+    height: 70px;
+    width: 255px;
+    background-color: #FFFFFF;
+    border: 1px solid #7875FE;
+}
