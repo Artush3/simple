@@ -25,4 +25,10 @@
     width: 255px;
     background-color: #FFFFFF;
     border: 1px solid #7875FE;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: #7875FE;
+        color: #FFFFFF;
+    }
 }

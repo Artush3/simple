@@ -131,4 +131,12 @@ section.section_item {
         }
     }
 }
+
+@media(max-width:320px) {
+    section.section_item {
+        div.conteiner_content {
+            grid-template-columns: 1fr;
+        }
+    }
+}
 </style>

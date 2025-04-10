@@ -9,7 +9,7 @@
                 </nav>
             </div>
         </section>
-        <section class="eader2_content_way">
+        <section class="header2_content_way">
             <div class="conteiner_content flex">
                 <a href="#">Продукция</a>
                 <a href="#">Материалы</a>
@@ -44,7 +44,7 @@ section.header2_content_cover {
     }
 }
 
-section.eader2_content_way {
+section.header2_content_way {
     @include main_block(20px) {
         border-bottom: 1px solid #DDDDDD;
     };
@@ -55,6 +55,12 @@ section.eader2_content_way {
 }
 
 @media(min-width:769px) {
+    header.header2_content {
+        display: none;
+    }
+}
+
+@media(max-width:320px) {
     header.header2_content {
         display: none;
     }

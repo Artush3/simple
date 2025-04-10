@@ -151,4 +151,23 @@ section.section_result {
         }
     }
 };
+
+@media(max-width:320px) {
+    section.section_result {
+        div.section_result_examples {
+            display: block;
+
+            div.section_result_examples_analogy {
+                min-width: 100%;
+                @include flex(center, space-between);
+                margin-bottom: 20px;
+
+                img {
+                    width: 130px;
+                    height: 96px;
+                }
+            }
+        }
+    }
+}
 </style>

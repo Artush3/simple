@@ -17,13 +17,15 @@
         </div>
     </header>
     <Header2></Header2>
+    <Header3></Header3>
 </template>
 
 <script>
 import Header2 from './more/Header2.vue';
+import Header3 from './more/Header3.vue';
 export default {
     name: "Header",
-    components: { Header2 }
+    components: { Header2, Header3 }
 }
 </script>
 

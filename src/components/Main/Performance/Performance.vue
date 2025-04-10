@@ -67,7 +67,7 @@ section.section_performance {
     }
 }
 
-@media(max-width:576px) {
+@media(max-width:576px) and (min-width:321px) {
     section.section_performance {
         div.section_performance_desc {
             max-width: 286px;
@@ -101,4 +101,27 @@ section.section_performance {
         }
     }
 }
+
+@media(max-width:320px) {
+    section.section_performance {
+        div.section_performance_desc {
+            max-width: 100%;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            a {
+                button {
+                    width: 144px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+};
 </style>
