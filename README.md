@@ -1,4 +1,5 @@
 # simple
+# Верстка красивого макета. Перед запуском проекта, выполните рекомендуемые действия, что описанны ниже)
 
 This template should help get you started developing with Vue 3 in Vite.
 
