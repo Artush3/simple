@@ -67,6 +67,7 @@ section.section_item {
             max-width: 255px;
 
             > img {
+                display: none;
                 width: 100%;
             }
 
@@ -113,8 +114,8 @@ section.section_item {
             div.section_item_product {
                 max-width: 100%;
 
-                img#first_img {
-                    display: none;
+                img#second_img {
+                    display: inline-block;
                 }
             }
         }
@@ -124,8 +125,8 @@ section.section_item {
 @media(min-width:769px) {
     section.section_item {
         div.section_item_product {
-            img#second_img {
-                display: none;
+            img#first_img {
+                display: inline-block;
             }
         }
     }

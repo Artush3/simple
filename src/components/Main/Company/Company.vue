@@ -47,4 +47,19 @@ section.section_company {
         }
     }
 }
+
+@media(max-width:576px) {
+    section.section_company {
+        div.conteiner_content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+
+            div.section_company_partner {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
 </style>

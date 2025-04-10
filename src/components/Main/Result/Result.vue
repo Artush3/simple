@@ -125,4 +125,30 @@ section.section_result {
         }
     }
 }
+
+@media(max-width:576px) {
+    section.section_result {
+        div.section_result_examples {
+            div.section_result_examples_analogy {
+                width: 150px;
+            }
+        }
+
+        div.section_result_white {
+            display: block;
+
+            div.section_result_white_desc {
+                max-width: 100%;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+};
 </style>

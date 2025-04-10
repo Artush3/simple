@@ -8,6 +8,7 @@
             </div>
             <img id="first_img" src="../../../img/Main/Performance/Layer 2 copy.svg" alt="показ">
             <img id="second_img" src="../../../img/Main/Performance/Layer 2.svg" alt="показ">
+            <img id="third_img" src="../../../img/Main/Performance/Layer 3.svg" alt="показ">
         </div>
     </section>
 </template>
@@ -44,12 +45,13 @@ section.section_performance {
     }
 
     img {
+        display: none;
         position: relative;
         top: 30px;
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:768px) and (min-width:577px) {
     section.section_performance {
         div.section_performance_desc {
             max-width: 390px;
@@ -59,16 +61,43 @@ section.section_performance {
             }
         }
 
-        img#first_img {
-            display: none;
+        img#second_img {
+            display: inline-block;
         }
     }
 }
 
+@media(max-width:576px) {
+    section.section_performance {
+        div.section_performance_desc {
+            max-width: 286px;
+
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                button {
+                    width: 196px;
+                    height: 60px;
+                }
+            }
+        }
+
+        img#third_img {
+            display: inline-block;
+        }
+    }
+};
+
 @media(min-width:769px) {
     section.section_performance {
-        img#second_img {
-            display: none;
+        img#first_img {
+            display: inline-block;
         }
     }
 }

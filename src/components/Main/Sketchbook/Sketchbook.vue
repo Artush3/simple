@@ -1,6 +1,7 @@
 <template>
     <section class="section_sketchbook">
         <div class="conteiner_content flex">
+            <img id="third_img" src="../../../img/Main/Sketchbook/pic3.svg" alt="скетчбук">
             <div class="section_sketchbook_desc">
                 <h1>Simple скетчбук</h1>
                 <p>80 листов, твердая обложка, бумага  Fabriano 200 г/м2. Подойдет и для графики и для акварели. Для самых смелых творческих замыслов!</p>
@@ -44,12 +45,13 @@ section.section_sketchbook {
     }
 
     img {
+        display: none;
         position: relative;
         top: 45px;
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:768px) and (min-width:577px) {
     section.section_sketchbook {
         @include main_block(30px);
 
@@ -61,11 +63,8 @@ section.section_sketchbook {
             }
         }
 
-        img#first_img {
-            display: none;
-        }
-
         img#second_img {
+            display: inline-block;
             position: relative;
             left: 30px;
             top: 30px;
@@ -75,8 +74,39 @@ section.section_sketchbook {
 
 @media(min-width:769px) {
     section.section_sketchbook {
-        img#second_img {
-            display: none;
+        img#first_img {
+            display: inline-block;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    section.section_sketchbook {
+        div.conteiner_content {
+            display: block;
+            div.section_sketchbook_desc {
+                max-width: 100%;
+                
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                a {
+                    button {
+                        height: 60px;
+                        width: 196px;
+                    }
+                }
+            }
+
+            img#third_img {
+                display: inline-block;
+                margin-bottom: 50px;
+            }
         }
     }
 }
